@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "3fb1a516-be69-490f-9688-0c5493e376ae",
+		"name": "IOG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37658300"
+	},
+	"item": [
+		{
+			"name": "Summarizer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Amy Montagne Becomes President, Nike Phil McCartney Becomes EVP, Chief Innovation, Design & Product Officer Nicole Graham Becomes EVP, Chief Marketing Officer Tom Clarke Becomes Chief Growth Initiatives Officer Heidi O’Neill to Retire BEAVERTON, Ore, May 05, 2025--(BUSINESS WIRE)--NIKE, Inc (NYSE:NKE) announced a series of strategic changes to its Senior Leadership Team (SLT), elevating experienced leaders to accelerate progress against its Win Now action plan to position the company for future growth Elliott Hill, President and CEO, NIKE, Inc and Heidi O’Neill, President of Consumer, Product, and Brand, have decided the Consumer, Product, and Brand leadership will now be divided into three distinct areas: Consumer and Sport, Marketing, and Product Creation, inclusive of Innovation and Design These roles will now report directly to Hill As a result of these changes O’Neill has decided to retire from Nike after 26 years She will continue to serve in an advisory capacity until September 2025 For nearly three decades, Heidi has been a true champion for Nike, for sport and for athletes across the globe Her vision and dedication over the years have left an indelible mark on Nike and created an impact on the world of sport, said Hill Among Heidi’s many successes, she most recently elevated our brand voice, and innovation and product pipeline by putting sport and athletes at the center of everything we do I want to thank Heidi for her passion, commitment and service and wish her the best on her next adventure The new Senior Leadership appointments will be effective immediately and include: Amy Montagne, previously VP/GM Global Women’s, has been promoted to President, Nike, responsible for obsessing and serving consumers across all sports and driving future growth for the Nike Brand Phil McCartney, formerly VP, Footwear, has been promoted to EVP, Chief Innovation, Design & Product Officer responsible for the creation of innovative and coveted product, season-after-season This includes how Nike, Jordan and Converse innovates, designs, and creates products for athletes around the world Nicole Graham, previously Chief Marketing Officer, has been promoted to EVP, Chief Marketing Officer, leading Nike, Jordan and Converse storytelling to inspire consumers and shape the brands for distinction through the passion and emotion of sport Tom Clarke, currently strategic advisor to the CEO and member of the SLT, has assumed the new role of Chief Growth Initiatives Officer I’m confident that with this new structure and leadership team in place we will be able to better line up and leverage all the advantages that make Nike great, said Hill These exceptional leaders bring extensive Nike experience and have been instrumental in resetting our priorities to lead with sport and put the athlete at the center of everything we do\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:5005/summarizer/summarize",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5005",
+					"path": [
+						"summarizer",
+						"summarize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scrap press releases",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"urls\": [\"https://finance.yahoo.com/news/swimwear-beachwear-markets-global-industry-115700604.html\",\r\n\"https://finance.yahoo.com/news/nike-inc-reports-fiscal-2026-201500094.html\",\r\n\"https://finance.yahoo.com/news/business-national-womens-soccer-league-082900730.html\",\r\n\"https://finance.yahoo.com/news/nike-inc-announces-senior-leadership-201500601.html\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/iog/scrap_press_releases",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"iog",
+						"scrap_press_releases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scrap tickers in others",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ticker\": \"AMZN\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:5000/iog/scrap_tickers_in_others",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"iog",
+						"scrap_tickers_in_others"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate opportunities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"windows\": [7, 30, 90, 365]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:5005/iog/generate_opportunities?top=10",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5005",
+					"path": [
+						"iog",
+						"generate_opportunities"
+					],
+					"query": [
+						{
+							"key": "top",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read opportunities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:5000/iog/read_opportunities",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"iog",
+						"read_opportunities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get press releases",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ticker\":\"OKLO\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/iog/get_press_releases",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"iog",
+						"get_press_releases"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

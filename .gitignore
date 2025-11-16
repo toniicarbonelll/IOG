@@ -1,0 +1,12 @@
+credentials.py
+/Docker
+/data
+/frontend
+/jupyter
+
+
+credentials.py
+
+# ignore all pycache folders anywhere
+__pycache__/
+
