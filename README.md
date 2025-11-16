@@ -7,7 +7,7 @@ This project aims at showing a web application I developped for investing in the
 
 I did not publish my angular code. I did however commit all the python functions and APIs for anyone that whishes to copy or use them. All the functions are correctly commented, including a description, its arguments and its output.  
 
-Here you can access a demo of the angular app (total of **3mins**, but recommended to play it a 1.5 speed):
+🎬 Here you can access a demo of the angular app (total of **3mins**, but recommended to play it a 1.5 speed):
 
 <a href="https://youtu.be/LkixjV7Zq2M"><img src="assets/IOG.png" alt="HTML tutorial"></a>
 
